@@ -44,7 +44,7 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 	case WM_CREATE:
 		{
 			SYSTEMTIME systime;
-			GetSystemTime(&systime);
+			GetLocalTime(&systime);
 			GetDateFormat(1041, DATE_USE_ALT_CALENDAR, &systime, TEXT("gg"), szGengo, 256);
 		}
 		break;
